@@ -1,7 +1,16 @@
 import logo from "/logo.png";
 import "./App.css";
+import WorldClock from "./WorldClock";
 
 function App() {
+  const timeZones = [
+    "Asia/Singapore",
+    "America/New_York",
+    "America/Los_Angeles",
+    "Europe/London",
+    "Asia/Tokyo",
+    "Australia/Sydney"
+  ];
   return (
     <>
       <div>
@@ -9,9 +18,7 @@ function App() {
       </div>
       <h1>World Clock</h1>
       <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <WorldClock clockData={timeZones} />
       </div>
     </>
   );
