@@ -1,5 +1,16 @@
 .inline-text {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust spacing as needed */
+}
+
+.city {
+    width: 20vw;
+    border: solid 1px black;
+    padding: 1vw;
+}
+
+.clock {
+    width: 30vw;
+    border: solid 1px black;
+    padding: 1vw;
 }

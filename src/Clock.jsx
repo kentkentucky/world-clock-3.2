@@ -21,7 +21,7 @@ function Clock(props)
 
     return (
         <p>
-            {date.toLocaleString("en-GB", { timeZone: `${props.timeZone}` })};
+            {date.toLocaleString("en-GB", { timeZone: `${props.timeZone}` })}
         </p>
     );
 }

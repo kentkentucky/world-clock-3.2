@@ -7,20 +7,23 @@ import "./WorldClock.css";
 
 function WorldClock({clockData})
 {
+    const dataRow = clockData.map((timeZone, index) => {
+        const Zone = timeZone.replace("_", " ");
+        return (
+            <Row key={index} className="mb-3 inline-text">
+                <Col className='city'><p>{Zone}</p></Col>
+                <Col className='clock'><Clock timeZone={timeZone}/></Col>
+            </Row>
+        );
+    });
+
     return (
         <Container>
-          {clockData.map((timeZone, index) => {
-            // Format city name by replacing underscores with spaces
-            const Zone = timeZone.replace("_", " ");
-            
-            // Render each time zone in a row with city name and clock
-            return (
-              <Row key={index} className="mb-3 inline-text">
-                <Col><p>{Zone}</p></Col>
-                <Col><Clock timeZone={timeZone} /></Col>
-              </Row>
-            );
-          })}
+            <Row className="mb-3 inline-text">
+                <Col className='city'>City</Col>
+                <Col className='clock'>Clock</Col>
+            </Row>
+            {dataRow}
         </Container>
     );
 }

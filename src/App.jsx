@@ -2,15 +2,16 @@ import logo from "/logo.png";
 import "./App.css";
 import WorldClock from "./WorldClock";
 
+const timeZones = [
+  "Asia/Singapore",
+  "America/New_York",
+  "America/Los_Angeles",
+  "Europe/London",
+  "Asia/Tokyo",
+  "Australia/Sydney"
+];
+
 function App() {
-  const timeZones = [
-    "Asia/Singapore",
-    "America/New_York",
-    "America/Los_Angeles",
-    "Europe/London",
-    "Asia/Tokyo",
-    "Australia/Sydney"
-  ];
   return (
     <>
       <div>
